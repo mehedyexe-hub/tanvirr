@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>শুভ জন্মদিন Tanvir 🎂</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        font-family: "Noto Sans Bengali", "Segoe UI", Arial, sans-serif;
+        color: #fff;
+        background:
+          radial-gradient(circle at 10% 10%, #32164f 0%, transparent 30%),
+          radial-gradient(circle at 90% 80%, #24134a 0%, transparent 35%),
+          linear-gradient(135deg, #05050b, #0b0915, #080812);
+      }
+
+      /* Background */
+      .background {
+        position: fixed;
+        inset: 0;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .star {
+        position: absolute;
+        animation: floatStar linear infinite;
+        opacity: 0.8;
+      }
+
+      @keyframes floatStar {
+        0% {
+          transform: translateY(110vh) rotate(0deg);
+          opacity: 0;
+        }
+        15% {
+          opacity: 0.9;
+        }
+        85% {
+          opacity: 0.9;
+        }
+        100% {
+          transform: translateY(-20vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* Main */
+      .main {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 18px 60px;
+      }
+
+      /* Top */
+      .top-text {
+        text-align: center;
+        color: #d9cde5;
+        font-size: 16px;
+        margin-bottom: 12px;
+        animation: fadeDown 1s ease;
+      }
+
+      .top-text span {
+        color: #ff8fc7;
+      }
+
+      /* Title */
+      .title {
+        text-align: center;
+        font-size: clamp(45px, 9vw, 85px);
+        font-weight: 900;
+        line-height: 1.1;
+        background: linear-gradient(
+          90deg,
+          #ffb5dc,
+          #ffffff,
+          #dca7ff,
+          #ff9acb,
+          #ffffff
+        );
+        background-size: 300%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: titleMove 5s linear infinite;
+      }
+
+      @keyframes titleMove {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 300%;
+        }
+      }
+
+      /* Subtitle */
+      .subtitle {
+        text-align: center;
+        color: #bdb5c9;
+        margin-top: 12px;
+        font-size: 16px;
+      }
+
+      /* Card */
+      .card {
+        margin: 35px auto 0;
+        padding: 32px 25px 35px;
+        max-width: 900px;
+        border-radius: 30px;
+
+        background: rgba(255, 255, 255, 0.055);
+
+        border: 1px solid rgba(255, 255, 255, 0.16);
+
+        box-shadow:
+          0 30px 80px rgba(0, 0, 0, 0.5),
+          inset 0 1px rgba(255, 255, 255, 0.08);
+
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        animation: cardAppear 1.2s ease;
+      }
+
+      @keyframes cardAppear {
+        from {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Photo */
+      .photo-wrapper {
+        width: 210px;
+        height: 210px;
+        margin: 0 auto 25px;
+
+        padding: 7px;
+
+        border-radius: 50%;
+
+        background: linear-gradient(135deg, #ff5fb7, #a855f7, #4f46e5);
+
+        box-shadow:
+          0 0 25px rgba(236, 72, 153, 0.35),
+          0 0 60px rgba(168, 85, 247, 0.25);
+
+        animation: photoGlow 3s ease-in-out infinite;
+      }
+
+      .photo-wrapper img {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+
+        border: 5px solid #0a0912;
+
+        background: #111;
+      }
+
+      @keyframes photoGlow {
+        0%,
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 25px rgba(236, 72, 153, 0.35);
+        }
+
+        50% {
+          transform: scale(1.035);
+          box-shadow: 0 0 50px rgba(168, 85, 247, 0.55);
+        }
+      }
+
+      /* Name */
+      .name {
+        text-align: center;
+
+        font-size: clamp(42px, 8vw, 70px);
+
+        font-weight: 900;
+
+        margin-bottom: 15px;
+
+        color: #ffafd8;
+
+        text-shadow:
+          0 0 15px rgba(255, 100, 190, 0.4),
+          0 0 35px rgba(255, 100, 190, 0.25);
+
+        animation: namePulse 2.5s ease-in-out infinite;
+      }
+
+      @keyframes namePulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.03);
+        }
+      }
+
+      /* Message */
+      .message {
+        max-width: 760px;
+        margin: auto;
+
+        text-align: center;
+
+        color: #ddd7e3;
+
+        font-size: 17px;
+        line-height: 2;
+      }
+
+      .message .highlight {
+        color: #ff9dce;
+        font-weight: bold;
+      }
+
+      /* Cake */
+      .cake-area {
+        position: relative;
+
+        width: 300px;
+        height: 260px;
+
+        margin: 35px auto 15px;
+      }
+
+      .plate {
+        position: absolute;
+
+        bottom: 15px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 250px;
+        height: 22px;
+
+        border-radius: 50%;
+
+        background: linear-gradient(#777, #222);
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .cake {
+        position: absolute;
+
+        left: 50%;
+        bottom: 35px;
+
+        transform: translateX(-50%);
+
+        width: 190px;
+        height: 105px;
+
+        border-radius: 15px 15px 25px 25px;
+
+        background: linear-gradient(90deg, #5e2053, #b43d82, #68245c);
+
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+
+        animation: cakeMove 2.5s ease-in-out infinite;
+      }
+
+      @keyframes cakeMove {
+        0%,
+        100% {
+          transform: translateX(-50%) translateY(0);
+        }
+
+        50% {
+          transform: translateX(-50%) translateY(-7px);
+        }
+      }
+
+      /* Cake Cream */
+      .cream {
+        position: absolute;
+
+        top: 20px;
+        left: 0;
+
+        width: 100%;
+        height: 15px;
+
+        border-radius: 50%;
+
+        background: #ffd9ea;
+
+        box-shadow:
+          0 15px #f5a4c9,
+          0 30px #ffd9ea;
+      }
+
+      /* Candles */
+      .candle {
+        position: absolute;
+
+        bottom: 140px;
+
+        width: 15px;
+        height: 60px;
+
+        border-radius: 6px;
+
+        background: repeating-linear-gradient(
+          45deg,
+          #fff 0px,
+          #fff 8px,
+          #f472b6 8px,
+          #f472b6 16px
+        );
+
+        z-index: 5;
+      }
+
+      .candle.one {
+        left: calc(50% - 50px);
+      }
+
+      .candle.two {
+        left: calc(50% - 7px);
+      }
+
+      .candle.three {
+        left: calc(50% + 36px);
+      }
+
+      .flame {
+        position: absolute;
+
+        width: 18px;
+        height: 26px;
+
+        left: -2px;
+        top: -24px;
+
+        border-radius: 50% 50% 50% 50%;
+
+        background: linear-gradient(#fff, #ffd000, #ff6b00);
+
+        transform: rotate(45deg);
+
+        box-shadow:
+          0 0 15px #ffd000,
+          0 0 30px #ff8c00;
+
+        animation: flameMove 0.6s ease-in-out infinite alternate;
+      }
+
+      @keyframes flameMove {
+        from {
+          transform: rotate(40deg) scale(0.9);
+        }
+
+        to {
+          transform: rotate(50deg) scale(1.1);
+        }
+      }
+
+      /* Buttons */
+      .buttons {
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        margin-top: 25px;
+      }
+
+      .btn {
+        position: relative;
+
+        border: none;
+        outline: none;
+
+        padding: 15px 28px;
+
+        border-radius: 50px;
+
+        color: #fff;
+
+        font-size: 16px;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        background: linear-gradient(135deg, #9333ea, #ec4899);
+
+        box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+
+        overflow: hidden;
+
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        transform: translateY(-5px) scale(1.04);
+
+        box-shadow: 0 15px 40px rgba(236, 72, 153, 0.5);
+      }
+
+      .btn:active {
+        transform: scale(0.94);
+      }
+
+      .btn::after {
+        content: "";
+
+        position: absolute;
+
+        top: 0;
+        left: -120%;
+
+        width: 70%;
+        height: 100%;
+
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
+
+        transform: skewX(-20deg);
+
+        transition: 0.7s;
+      }
+
+      .btn:hover::after {
+        left: 140%;
+      }
+
+      /* Surprise */
+      .surprise {
+        max-width: 750px;
+
+        margin: 30px auto 0;
+
+        padding: 25px;
+
+        border-radius: 25px;
+
+        background: linear-gradient(
+          135deg,
+          rgba(168, 85, 247, 0.12),
+          rgba(236, 72, 153, 0.1)
+        );
+
+        border: 1px solid rgba(255, 255, 255, 0.12);
+
+        display: none;
+      }
+
+      .surprise.show {
+        display: block;
+
+        animation: surpriseShow 0.8s ease;
+      }
+
+      @keyframes surpriseShow {
+        from {
+          opacity: 0;
+          transform: scale(0.7);
+        }
+
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .surprise h2 {
+        text-align: center;
+
+        color: #ff9dce;
+
+        margin-bottom: 15px;
+      }
+
+      .surprise p {
+        text-align: center;
+
+        line-height: 2;
+
+        color: #ded8e5;
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+
+        margin-top: 25px;
+
+        color: #77717f;
+
+        font-size: 13px;
+      }
+
+      /* Confetti */
+      .confetti {
+        position: fixed;
+
+        top: -20px;
+
+        width: 9px;
+        height: 14px;
+
+        z-index: 9999;
+
+        pointer-events: none;
+
+        animation: fall 3.5s linear forwards;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translateY(110vh) rotate(720deg);
+
+          opacity: 0;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 600px) {
+        .main {
+          padding: 30px 12px 50px;
+        }
+
+        .card {
+          padding: 25px 15px 30px;
+        }
+
+        .photo-wrapper {
+          width: 170px;
+          height: 170px;
+        }
+
+        .message {
+          font-size: 15px;
+        }
+
+        .cake-area {
+          transform: scale(0.85);
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .btn {
+          width: 100%;
+          max-width: 280px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="background"
+      id="background"
+    ></div>
+
+    <main class="main">
+      <div class="top-text">
+        🌸 কারণ আজকের দিনেই পৃথিবী একজন বিশেষ মানুষকে পেয়েছিল
+        <span>💖</span>
+      </div>
+
+      <h1 class="title">শুভ জন্মদিন 🎂</h1>
+
+      <p class="subtitle">আজকের দিনটা শুধু তোমার জন্যই একটু বেশি সুন্দর ✨</p>
+
+      <section class="card">
+        <!-- PHOTO -->
+        <!-- GitHub file name: tanvir.jpeg -->
+        <div class="photo-wrapper">
+          <img
+            src="./tanvir.jpeg"
+            alt="Tanvir"
+            onerror="
+              this.style.display = 'none';
+              this.parentElement.classList.add('photo-error');
+            "
+          />
+        </div>
+
+        <h2 class="name">Tanvir 💜</h2>
+
+        <div class="message">
+          আজকের এই সুন্দর দিনে তোমার জন্য রইলো অনেক অনেক
+          <span class="highlight">শুভকামনা ও ভালোবাসা।</span> 🌸
+
+          <br />
+
+          তোমার জীবনের প্রতিটি দিন যেন হাসি, আনন্দ আর সুন্দর মুহূর্তে ভরে থাকে।
+          ✨
+
+          <br />
+
+          তোমার সব স্বপ্ন পূরণ হোক, জীবনের প্রতিটি নতুন দিন তোমার জন্য আরও
+          সুন্দর কিছু নিয়ে আসুক। 😊
+
+          <br /><br />
+
+          <span class="highlight"> শুভ জন্মদিন, Tanvir! 🎂💖 </span>
+        </div>
+
+        <!-- CAKE -->
+        <div class="cake-area">
+          <div class="plate"></div>
+
+          <div class="cake">
+            <div class="cream"></div>
+          </div>
+
+          <div class="candle one">
+            <div class="flame"></div>
+          </div>
+
+          <div class="candle two">
+            <div class="flame"></div>
+          </div>
+
+          <div class="candle three">
+            <div class="flame"></div>
+          </div>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="buttons">
+          <button
+            class="btn"
+            onclick="showSurprise()"
+          >
+            🎁 Surprise দেখো
+          </button>
+
+          <button
+            class="btn"
+            onclick="celebrate()"
+          >
+            🎉 Celebrate!
+          </button>
+        </div>
+
+        <!-- SURPRISE -->
+        <div
+          class="surprise"
+          id="surprise"
+        >
+          <h2>💌 Tanvir-এর জন্য ছোট্ট Surprise</h2>
+
+          <p>
+            কিছু মানুষ জীবনে আসে আর মুহূর্তগুলোকে একটু বেশি সুন্দর করে তোলে। 🌷
+
+            <br />
+
+            তোমার আগামী দিনগুলো যেন আরও বেশি আনন্দ, সফলতা আর সুন্দর স্মৃতিতে ভরে
+            যায়। ✨
+
+            <br /><br />
+
+            আজকের দিনটা অনেক অনেক উপভোগ করো। 🎂
+
+            <br />
+
+            <strong> আবারও শুভ জন্মদিন, Tanvir! 💜🎉 </strong>
+          </p>
+        </div>
+      </section>
+
+      <div class="footer">Made with 💜 specially for Tanvir</div>
+    </main>
+
+    <script>
+      /* Floating Stars */
+      const background = document.getElementById("background");
+
+      const symbols = ["✨", "💜", "💖", "⭐", "🌸", "💫", "🤍"];
+
+      for (let i = 0; i < 40; i++) {
+        const star = document.createElement("div");
+
+        star.className = "star";
+
+        star.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+
+        star.style.left = Math.random() * 100 + "vw";
+
+        star.style.fontSize = 12 + Math.random() * 20 + "px";
+
+        star.style.animationDuration = 7 + Math.random() * 10 + "s";
+
+        star.style.animationDelay = Math.random() * 8 + "s";
+
+        background.appendChild(star);
+      }
+
+      /* Surprise */
+      function showSurprise() {
+        const box = document.getElementById("surprise");
+
+        box.classList.toggle("show");
+
+        celebrate();
+      }
+
+      /* Celebration */
+      function celebrate() {
+        for (let i = 0; i < 130; i++) {
+          const confetti = document.createElement("div");
+
+          confetti.className = "confetti";
+
+          confetti.style.left = Math.random() * 100 + "vw";
+
+          confetti.style.background = `hsl(${Math.random() * 360},85%,70%)`;
+
+          confetti.style.animationDuration = 2.5 + Math.random() * 2 + "s";
+
+          confetti.style.animationDelay = Math.random() * 0.7 + "s";
+
+          document.body.appendChild(confetti);
+
+          setTimeout(() => {
+            confetti.remove();
+          }, 5000);
+        }
+      }
+
+      /* Small automatic celebration */
+      setTimeout(() => {
+        celebrate();
+      }, 1500);
+    </script>
+  </body>
+</html>
